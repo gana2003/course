@@ -7,10 +7,10 @@ import { Injectable } from '@angular/core';
 export class ServiceService {
 
   constructor(private http:HttpClient) { }
-  getcourses(){
-    return this.http.get('https://mylinkurcodesapp.herokuapp.com/getcourses');
+  viewcourses(){
+    return this.http.get('http://localhost:3000/viewcourse');
   }
   addcourse(course:any){
-    return this.http.post<any>('https://mylinkurcodesapp.herokuapp.com/addcourse',course);
+    return this.http.post<any>('http://localhost:3000/getcourse',course);
   }
 }
